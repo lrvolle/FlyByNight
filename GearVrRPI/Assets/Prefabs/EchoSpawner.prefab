@@ -40,16 +40,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 20
-  timeStamp: 0
-  cooldown: 3
-  echo: {fileID: 0}
+  maxWarmUp: 2
+  echo: {fileID: 175256, guid: 1c4b38667a9d5f94ab98d7031ac143ee, type: 2}
+  Chirp1: {fileID: 8300000, guid: fc2cbb32377198c4d91b0eb2065e9683, type: 3}
+  Chirp2: {fileID: 8300000, guid: f07bf3ecee7296b498c640d7164c6e6f, type: 3}
+  Hum: {fileID: 8300000, guid: 777cfa1103e83d545858d6b7161c0d93, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Chirp1
+      value: 
+      objectReference: {fileID: 8300000, guid: fc2cbb32377198c4d91b0eb2065e9683, type: 3}
+    - target: {fileID: 0}
+      propertyPath: Chirp2
+      value: 
+      objectReference: {fileID: 8300000, guid: f07bf3ecee7296b498c640d7164c6e6f, type: 3}
+    - target: {fileID: 0}
+      propertyPath: echo
+      value: 
+      objectReference: {fileID: 175256, guid: 1c4b38667a9d5f94ab98d7031ac143ee, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Hum
+      value: 
+      objectReference: {fileID: 8300000, guid: 777cfa1103e83d545858d6b7161c0d93, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157614}

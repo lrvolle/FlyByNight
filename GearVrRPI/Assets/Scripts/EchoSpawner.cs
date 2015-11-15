@@ -8,18 +8,32 @@ public class EchoSpawner : MonoBehaviour {
     private float minWarmUp = .2f;
     public float maxWarmUp =              2f;
     public GameObject echo;
-    
+    public AudioClip Chirp1;
+    public AudioClip Chirp2;
+    private AudioSource chirpSource;
+    public AudioClip Hum;
+    private AudioSource humSource;
+
 
     // Use this for initialization
     void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        chirpSource = gameObject.AddComponent<AudioSource>();
+        chirpSource.volume = 0.4f;
+        humSource = gameObject.AddComponent<AudioSource>();
+        humSource.volume = 0.1f;
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (Input.GetButtonDown("AButton"))
         {
             buttonPressTime = Time.time;
+            if (!humSource.isPlaying)
+            {
+                Debug.Log("HERE");
+                humSource.clip = Hum;
+                humSource.Play();
+            }
         }
         if (Input.GetButtonUp("AButton") && Time.time > buttonPressTime + minWarmUp)
         {
@@ -46,6 +60,19 @@ public class EchoSpawner : MonoBehaviour {
                 echoBody.AddForce(newForce, ForceMode.Impulse);
                 Debug.DrawRay(transform.position, newForce, Color.red);
             }
+
+            //play chirping sound
+            chirpSource.pitch = Random.Range(0.5f, 1.5f);
+            if (Random.value > .5)
+            {
+                chirpSource.clip = Chirp1;
+            }
+            else
+            {
+                chirpSource.clip = Chirp2;
+            }
+            humSource.Stop();
+            chirpSource.Play();
             
         }
 

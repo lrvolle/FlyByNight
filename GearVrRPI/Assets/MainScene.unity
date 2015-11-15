@@ -85,21 +85,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &450190002 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 155058, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
-  m_PrefabInternal: {fileID: 2037789334}
---- !u!114 &450190003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 450190002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad2d4b64a090ca488017bf9e71837f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &572486175
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,28 +276,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1025725076 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 155058, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
-  m_PrefabInternal: {fileID: 2037789334}
---- !u!114 &1025725077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025725076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98babbeff7778984b9061ee018443523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clampInDegrees: {x: 360, y: 180}
-  lockCursor: 0
-  sensitivity: {x: 2, y: 2}
-  smoothing: {x: 3, y: 3}
-  targetDirection: {x: 0, y: 0}
-  targetCharacterDirection: {x: 0, y: 0}
-  characterBody: {fileID: 0}
 --- !u!1 &1353093308
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,14 +612,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 14395316, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155058, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
+    - target: {fileID: 11482496, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
+      propertyPath: Chirp2
+      value: 
+      objectReference: {fileID: 8300000, guid: fc2cbb32377198c4d91b0eb2065e9683, type: 3}
+    - target: {fileID: 11482496, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
+      propertyPath: Chirp1
+      value: 
+      objectReference: {fileID: 8300000, guid: fc2cbb32377198c4d91b0eb2065e9683, type: 3}
+    - target: {fileID: 11482496, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
+      propertyPath: Hum
+      value: 
+      objectReference: {fileID: 8300000, guid: 777cfa1103e83d545858d6b7161c0d93, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d176c4d7791ef242bec50619b2c9733, type: 2}
   m_IsPrefabParent: 0
