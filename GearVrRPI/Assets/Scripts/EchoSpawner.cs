@@ -30,7 +30,6 @@ public class EchoSpawner : MonoBehaviour {
             buttonPressTime = Time.time;
             if (!humSource.isPlaying)
             {
-                Debug.Log("HERE");
                 humSource.clip = Hum;
                 humSource.Play();
             }
