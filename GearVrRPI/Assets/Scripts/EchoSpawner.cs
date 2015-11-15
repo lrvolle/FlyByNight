@@ -40,7 +40,7 @@ public class EchoSpawner : MonoBehaviour {
             buttonPressTime = Time.time - buttonPressTime;
             if (buttonPressTime > maxWarmUp)
                 buttonPressTime = maxWarmUp;
-            int echoSize = (int)Mathf.Round(buttonPressTime * 100);
+            int echoSize = (int)Mathf.Round(buttonPressTime * 50);
 
             //distribute echoSize points in circle, using a sunflower seed arrangement 
             int boundPts = (int)Mathf.Round(2 * Mathf.Sqrt((float)echoSize));
@@ -51,7 +51,7 @@ public class EchoSpawner : MonoBehaviour {
                 float theta = 2 * Mathf.PI * i / (phi * phi);
                 float x = radius * Mathf.Cos(theta);
                 float y = radius * Mathf.Sin(theta);
-                Vector3 circleCenter = transform.position + transform.forward * force;
+                Vector3 circleCenter = transform.position + transform.forward * (force - 5f);
                 Vector3 target = transform.rotation * new Vector3(x,y,0) + circleCenter;
                 Vector3 newForce = (target - transform.position).normalized * force;
                 GameObject newEcho = Instantiate(echo,
