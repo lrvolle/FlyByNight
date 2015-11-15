@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2392528}
   - 96: {fileID: 9681044}
   - 54: {fileID: 5490294}
+  - 114: {fileID: 11475598}
   m_Layer: 8
   m_Name: Echo
   m_TagString: Untagged
@@ -84,7 +85,7 @@ TrailRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
@@ -123,6 +124,20 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .100000001
   m_Autodestruct: 1
+--- !u!114 &11475598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dceb0f1a47fb4c840b1b7418301c4c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  hitLight: {fileID: 156328, guid: c736caf8ea8d348428208f3b3442d370, type: 2}
+  lightDistFromImpact: 4
 --- !u!135 &13509082
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -197,6 +212,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitLight
+      value: 
+      objectReference: {fileID: 156328, guid: c736caf8ea8d348428208f3b3442d370, type: 2}
+    - target: {fileID: 0}
+      propertyPath: lightDistFromImpact
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
