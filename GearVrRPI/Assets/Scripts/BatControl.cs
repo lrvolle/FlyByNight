@@ -5,9 +5,11 @@ public class BatControl : MonoBehaviour {
     
     public float movementSpeed = 10f;
 
+    CharacterController _controller;
+
     void Awake()
     {
-
+        _controller = GetComponent<CharacterController>();
     }
 
 	// Use this for initialization
@@ -18,7 +20,7 @@ public class BatControl : MonoBehaviour {
     void ProcessInput()
     {
         float movement = Input.GetAxis("Vertical");
-        transform.position += transform.forward * movement * movementSpeed * Time.deltaTime;
+        _controller.Move(transform.forward * movement * movementSpeed * Time.deltaTime);
     }
 	
 	// Update is called once per frame
