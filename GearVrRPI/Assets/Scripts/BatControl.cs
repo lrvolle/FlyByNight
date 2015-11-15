@@ -20,7 +20,7 @@ public class BatControl : MonoBehaviour {
     void ProcessInput()
     {
         float movement = Input.GetAxis("Vertical");
-        _controller.Move(transform.forward * movementSpeed * Time.deltaTime);
+        _controller.Move(transform.forward * movement * movementSpeed * Time.deltaTime);
     }
 	
 	// Update is called once per frame
