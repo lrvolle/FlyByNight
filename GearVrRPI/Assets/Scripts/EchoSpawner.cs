@@ -5,10 +5,9 @@ public class EchoSpawner : MonoBehaviour {
     //initialize vars
     public float force = 5f;
     private float buttonPressTime = 0;
-    private float minWarmUp = .5f;
-    public float maxWarmUp = 2f;
-    public Object echo;
-
+    private float minWarmUp = .2f;
+    public float maxWarmUp =              2f;
+    public GameObject echo;
     
 
     // Use this for initialization
@@ -49,5 +48,6 @@ public class EchoSpawner : MonoBehaviour {
             }
             
         }
+
 	}
 }
